@@ -1,0 +1,115 @@
+
+.head-ul , .head-header , .head-article{
+    justify-content:center;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+.head-article{
+    width: 70%;
+    min-width: 510px;
+    height: 5rem;
+    justify-content: space-between;
+
+}
+.humber{
+    display: none;
+    width: 20px;
+    height: 50px;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+}
+.humber div{
+    width: 100%;
+    height: 1px;
+    background-color: #333333;
+    transform: rotateZ(0);
+    position: absolute;
+    transition: 0.5s;
+}
+.humber div:nth-child(1) {
+    top: 17px;
+}
+.humber.active div:nth-child(1) {
+    top: auto;
+    transform: rotateZ(45deg);
+}
+.humber.active div:nth-child(2) {
+    transform: rotateZ(-45deg);
+}
+.humber.active div:nth-child(3) {
+    bottom: auto;
+    transform: rotateZ(45deg);
+}
+.humber div:nth-child(3) {
+    bottom: 18px;
+}
+ul.active-ul{
+    opacity: 100% !important;
+    transition: opacity 0.5s;
+}
+@media screen and (max-width:550px){
+    .head-article  ul.head-ul{
+    transition: opacity  0.5s ;
+
+        opacity: 0;
+        min-width: auto;
+        position: absolute;
+        flex-direction: column;
+        right: 10%;
+        background: #ffffff;
+        box-shadow: 0 0 2px #333333;
+        border-radius: 13px;
+        padding: 45px 20px;
+        gap: 1.4rem;
+        border: 1px solid #cccccc; 
+        height: auto;
+        top: 20%;
+    }
+    .head-article{
+        min-width: auto;
+    }  
+    .humber{
+        display: flex;
+    }
+}
+
+.head-header{
+    box-shadow: 0 0 3px 0px #cccccc; 
+    border-bottom: 1px solid #cccccc;
+}
+.head-ul{
+    height: 100%;
+    gap: 1.2rem;
+    justify-content: flex-end;
+}
+
+.head-h1{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+/* استایل مودال */
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+  }
+  
+  .modal ul {
+    background-color: white;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+  }
